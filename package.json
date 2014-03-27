@@ -1,0 +1,27 @@
+{
+  "name": "argsplit",
+  "version": "0.0.0",
+  "description": "Split a string of arguments into an array",
+  "main": "index.js",
+  "scripts": {
+    "test": "tap test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/evanlucas/argsplit"
+  },
+  "keywords": [
+    "args",
+    "argv",
+    "array"
+  ],
+  "author": "Evan Lucas <evanlucas@me.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/evanlucas/argsplit/issues"
+  },
+  "homepage": "https://github.com/evanlucas/argsplit",
+  "devDependencies": {
+    "tap": "^0.4.8"
+  }
+}
