@@ -1,5 +1,7 @@
 # argsplit
 
+[![Build Status](https://travis-ci.org/evanlucas/argsplit.svg)](https://travis-ci.org/evanlucas/argsplit)
+
 Convert a string of arguments into an array
 
 ## Install
