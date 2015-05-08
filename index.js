@@ -1,9 +1,9 @@
 module.exports = function(str) {
+  if (!str) return []
   var out = []
     , quoteChar = ''
     , current = ''
 
-  if (!str) return []
   str = str.replace(/[\s]{2}/g, ' ')
   for (var i=0, len=str.length; i<len; i++) {
     var c = str[i]
