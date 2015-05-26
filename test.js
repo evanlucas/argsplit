@@ -44,6 +44,21 @@ test('args with single quotes', function(t) {
   t.equal(out[5], '--verbose', 'out[5] === \'--verbose\'')
 })
 
+test('args with nested quotes', function(t) {
+  t.plan(9)
+  var input = "npm config set init.author.name 'Evan \"Hereford\" Lucas' --verbose"
+  var out = argsplit(input)
+  t.ok(out, 'out exists')
+  t.type(out, Array, 'out is an Array')
+  t.equal(out.length, 6, 'out should have 6 items')
+  t.equal(out[0], 'npm', 'out[0] === \'npm\'')
+  t.equal(out[1], 'config', 'out[1] === \'config\'')
+  t.equal(out[2], 'set', 'out[2] === \'set\'')
+  t.equal(out[3], 'init.author.name', 'out[3] === \'init.author.name\'')
+  t.equal(out[4], "'Evan \"Hereford\" Lucas'", "out[4] === \"'Evan \"Hereford\" Lucas'\"")
+  t.equal(out[5], '--verbose', 'out[5] === \'--verbose\'')
+})
+
 test('blank string', function(t) {
   t.plan(3)
   var input = ''

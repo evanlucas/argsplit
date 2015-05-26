@@ -8,7 +8,7 @@ module.exports = function(str) {
   for (var i=0, len=str.length; i<len; i++) {
     var c = str[i]
     if (c === ' ') {
-      if (quoteChar) {
+      if (quoteChar.length) {
         current += c
       } else {
         if (current) {
@@ -16,24 +16,21 @@ module.exports = function(str) {
           current = ''
         }
       }
-    } else if (c === '"') {
-      if (quoteChar && quoteChar === c) {
-        current += c
-        out.push(current)
-        quoteChar = ''
-        current = ''
+    } else if (c === '"' || c === "'") {
+      if (quoteChar) {
+        if (quoteChar === c) {
+          current += c
+          out.push(current)
+          quoteChar = ''
+          current = ''
+        } else if (quoteChar === '"' || quoteChar === "'") {
+          current += c
+        } else {
+          current += c
+          quoteChar = c
+        }
       } else {
         current += c
-        quoteChar = c
-      }
-    } else if (c === "'") {
-      if (quoteChar && quoteChar === c) {
-        current += c
-        out.push(current)
-        quoteChar = ''
-        current = ''
-      } else {
-        current +=
         quoteChar = c
       }
     } else {
