@@ -1,3 +1,5 @@
+'use strict'
+
 module.exports = function(str) {
   if (!str) return []
   var out = []
