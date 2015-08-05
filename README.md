@@ -1,6 +1,7 @@
 # argsplit
 
 [![Build Status](https://travis-ci.org/evanlucas/argsplit.svg)](https://travis-ci.org/evanlucas/argsplit)
+[![Coverage Status](https://coveralls.io/repos/evanlucas/argsplit/badge.svg?branch=master&service=github)](https://coveralls.io/github/evanlucas/argsplit?branch=master)
 
 Convert a string of arguments into an array
 
@@ -14,6 +15,12 @@ $ npm install --save argsplit
 
 ```bash
 $ npm test
+```
+
+## Coverage
+
+```bash
+$ npm test -- --cov
 ```
 
 ## Use cases
