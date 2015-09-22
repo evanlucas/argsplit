@@ -1,6 +1,6 @@
 {
   "name": "argsplit",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Split a string of arguments into an array",
   "main": "index.js",
   "scripts": {
